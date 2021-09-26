@@ -11,14 +11,9 @@ Roadnet file defines the roadnet structure. CityFlow's roadnet mainly consists o
 
 Now let's see a sample roadnet file and we'll explain the meaning of each components. Relax, the definition of field is quite straight forward, if you are familiar with modern road networks. For the following json file, ``[]`` means this field is an array, but we will only show one object for demonstration. 
 
-.. note::
-  Runnable sample roadnet files can be found in ``examples`` folder.
 
-Sample ``roadnet.json`` with explanation.
 
 .. code-block:: js
-
-  {
     "intersections": [
       {
         // id of the intersection
@@ -83,6 +78,9 @@ Sample ``roadnet.json`` with explanation.
         "virtual": false
       }
     ],
+ bla bla blas
+
+.. code-block:: js
     "roads": [
       {
         // id of road
