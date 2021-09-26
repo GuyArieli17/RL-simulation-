@@ -80,7 +80,7 @@ Now let's see a sample roadnet file and we'll explain the meaning of each compon
     ],
  bla bla blas
 
-.. code-block:: js
+
     "roads": [
       {
         // id of road
