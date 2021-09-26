@@ -5,5 +5,3 @@ Roadnet File Format
   "intersections": []
  }
  
-text
- 
