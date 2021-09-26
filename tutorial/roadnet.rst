@@ -119,7 +119,7 @@ Sample ``roadnet.json`` with explanation.
 You can convert SUMO roadnet files into CityFlow format using tools/Converter/converter.py
 
 For example, the following code converts a sumo roadnet file, atlanta.net.xml, to CityFlow format.
-
+d
 .. code-block:: shell
 
     python converter.py --sumonet atlanta_sumo.net.xml --cityflownet atlanta_cityflow.json
