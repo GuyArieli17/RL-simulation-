@@ -13,7 +13,7 @@ Now let's see a sample roadnet file and we'll explain the meaning of each compon
 
 
 
-.. code-block:: js
+```
     "intersections": [
       {
         // id of the intersection
@@ -78,6 +78,7 @@ Now let's see a sample roadnet file and we'll explain the meaning of each compon
         "virtual": false
       }
     ],
+```
  bla bla blas
 
 
