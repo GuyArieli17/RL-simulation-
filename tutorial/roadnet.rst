@@ -11,72 +11,10 @@ Roadnet file defines the roadnet structure. CityFlow's roadnet mainly consists o
 
 Now let's see a sample roadnet file and we'll explain the meaning of each components. Relax, the definition of field is quite straight forward, if you are familiar with modern road networks. For the following json file, ``[]`` means this field is an array, but we will only show one object for demonstration. 
 
-```json
-    "intersections": [
-      {
-        // id of the intersection
-        "id": "intersection_1_0",
-        // coordinate of center of intersection
-        "point": { 
-          "x": 0,
-          "y": 0
-        },
-        // width of the intersection
-        "width": 10,
-        // roads connected to the intersection
-        "roads": [
-          "road_1",
-          "road_2"
-        ],
-        // roadLinks of the intersection
-        "roadLinks": [
-          {
-            // 'turn_left', 'turn_right', 'go_straight'
-            "type": "go_straight",
-            // id of starting road
-            "startRoad": "road_1",
-            // id of ending road
-            "endRoad": "road_2",
-            // lanelinks of roadlink
-            "laneLinks": [ 
-              {
-                // from startRoad's startLaneIndex lane to endRoad's endLaneIndex lane
-                "startLaneIndex": 0, 
-                "endLaneIndex": 1,
-                // points along the laneLink which describe the shape of laneLink
-                "points": [
-                  {
-                    "x": -10,
-                    "y": 2
-                  },
-                  {
-                    "x": 10,
-                    "y": -2
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        // traffic light plan of the intersection
-        "trafficLight": {
-          "lightphases": [
-            {
-              // default duration of the phase
-              "time": 30,
-              // available roadLinks of current phase, index is the no. of roadlinks defined above.
-              "availableRoadLinks": [
-                0,
-                2
-              ]
-            }
-          ]
-        },
-        // true if it's a peripheral intersection (if it only connects to one road)
-        "virtual": false
-      }
-    ],
+```javascript
+{ "some": "json" }
 ```
+
  bla bla blas
 
 
