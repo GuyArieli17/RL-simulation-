@@ -20,4 +20,4 @@ Flow file defines the traffic flow. Each flow contains following field:
 - ``startTime``, ``endTime``: Flow will generate vehicles between time [startTime, endTime] (in seconds), including ``startTime`` and ``endTime``.
 
 .. note::
-  Runnable sample flow files can be found in ``examples`` folder.
+  Runnable sample flow files can be found in ``examples`` folder
