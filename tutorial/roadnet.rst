@@ -2,6 +2,8 @@ Roadnet File Format
 ===================
 .. code-block:: js
  {
-  "intersections": []
+  "intersections": 5,
+  "x": 2,
+  "t": 3,
  }
  
