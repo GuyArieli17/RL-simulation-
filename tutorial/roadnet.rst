@@ -1,7 +1,7 @@
 Roadnet File
 ======
 
-```json
+.. code-block:: js
 "intersections": [
         {
             // eatch intersection has to have id 
@@ -67,6 +67,5 @@ Roadnet File
             // if has then one road connected so false
             "virtual": false
         },
-```
 
 That was my JSON code block.
