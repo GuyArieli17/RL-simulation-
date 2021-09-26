@@ -1,5 +1,3 @@
-.. _roadnet:
-
 Roadnet File Format
 ===================
 
