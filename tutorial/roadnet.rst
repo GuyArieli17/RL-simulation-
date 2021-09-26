@@ -17,7 +17,6 @@ Now let's see a sample roadnet file and we'll explain the meaning of each compon
 Sample ``roadnet.json`` with explanation.
 
 .. code-block:: js
-
   {
     "intersections": [
       {
