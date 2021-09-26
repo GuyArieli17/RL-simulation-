@@ -1,3 +1,5 @@
+.. _roadnet:
+
 Roadnet File Format
 ===================
 
@@ -13,7 +15,9 @@ Now let's see a sample roadnet file and we'll explain the meaning of each compon
   Runnable sample roadnet files can be found in ``examples`` folder.
 
 Sample ``roadnet.json`` with explanation.
+
 .. code-block:: js
+
   {
     "intersections": [
       {
@@ -108,8 +112,8 @@ Sample ``roadnet.json`` with explanation.
       }
     ]
   }
-  
-  
+
+
 .. figure:: https://github.com/cityflow-project/data/raw/master/docs/images/roadnet.jpg
     :align: center
 
@@ -119,8 +123,7 @@ Sample ``roadnet.json`` with explanation.
 You can convert SUMO roadnet files into CityFlow format using tools/Converter/converter.py
 
 For example, the following code converts a sumo roadnet file, atlanta.net.xml, to CityFlow format.
-d
+
 .. code-block:: shell
 
     python converter.py --sumonet atlanta_sumo.net.xml --cityflownet atlanta_cityflow.json
-
