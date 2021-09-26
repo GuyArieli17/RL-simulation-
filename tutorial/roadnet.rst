@@ -1,21 +1,9 @@
 Roadnet File Format
 ===================
-
-Roadnet file defines the roadnet structure. CityFlow's roadnet mainly consists of intersections and roads (see them as nodes and edges of a graph). 
-
-- *Road* represents a directional road from one *intersection* to another *intersection* with road-specific properties. A *road* may contain multiple *lanes*. 
-- *Intersection* is where roads intersects. An *intersection* contains several *roadlinks*. Each *roadlink* connects two roads of the intersection and can be controlled by traffic signals. 
-- A *roadlink* may contain several *lanelinks*. Each lanelink represents a specific path from one lane of incoming road to one lane of outgoing road. 
-
-Now let's see a sample roadnet file and we'll explain the meaning of each components. Relax, the definition of field is quite straight forward, if you are familiar with modern road networks. For the following json file, ``[]`` means this field is an array, but we will only show one object for demonstration. 
-
-.. note::
-  Runnable sample roadnet files can be found in ``examples`` folder.
-
-Sample ``roadnet.json`` with explanation.
-
 .. code-block:: js
-
+  bla bla bla
+..
+text
   {
     "intersections": [
       {
