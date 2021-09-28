@@ -6,7 +6,11 @@ The file compose of 2 main 'objects' witch determined it behaviour: `intersectio
 ### intersections 
 object|description
 ------|-------------------------
-`id` |uniq to each intersection.
+`id` |uniq string.
+`point`| the intersection centered coordinate `{"x": num1,"y":num2}`
+`width`| the height or length of the intersection
+`roads`| id's of roads connected to the intersection, max.6
+`roadLinks`|
 
 
 
@@ -16,20 +20,6 @@ object|description
   {
     "intersections": [
       {
-        // id of the intersection
-        "id": "intersection_1_0",
-        // coordinate of center of intersection
-        "point": { 
-          "x": 0,
-          "y": 0
-        },
-        // width of the intersection
-        "width": 10,
-        // roads connected to the intersection
-        "roads": [
-          "road_1",
-          "road_2"
-        ],
         // roadLinks of the intersection
         "roadLinks": [
           {
