@@ -7,7 +7,7 @@ The file compose of 2 main 'objects' witch determined it behaviour: `intersectio
 object|description
 ------|-------------------------
 `id` |uniq string.
-`point`| the intersection centered coordinate `{"x": num1,"y":num2}`
+`point`| the intersection centered coordinate `x` , `y`
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
 `roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: , <br>`startRoad`: ,<br>`endRoad`: <br> `laneLinks`: []
