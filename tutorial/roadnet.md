@@ -14,60 +14,11 @@ object|description
 `trafficLight` | include `lightphases` wich determined th phase (period,and wich lanes).
 `virtual` | true if it's a peripheral intersection (if it only connects to one road).
                 
-
-
-
 ### roads
-```js
-
-  {
-    "intersections": [
-      {
-        // traffic light plan of the intersection
-        "trafficLight": {
-          "lightphases": [
-            {
-              // default duration of the phase
-              "time": 30,
-              // available roadLinks of current phase, index is the no. of roadlinks defined above.
-              "availableRoadLinks": [
-                0,
-                2
-              ]
-            }
-          ]
-        },
-        // true if it's a peripheral intersection (if it only connects to one road)
-        "virtual": false
-      }
-    ],
-    "roads": [
-      {
-        // id of road
-        "id": "road_1",
-        // id of start intersection
-        "startIntersection": "intersection_1",
-        // id of end intersection
-        "endIntersection": "intersection_2",
-        // points along the road which describe the shape of the road
-        "points": [
-          {
-            "x": -200,
-            "y": 0
-          },
-          {
-            "x": 0,
-            "y": 0
-          }
-        ],
-        // property of each lane
-        "lanes": [
-          {
-            "width": 4,
-            "maxSpeed": 16.67
-          }
-        ]
-      }
-    ]
-  }
-```
+object|description
+------|-------------------------
+`id` | uniq string
+`startIntersection` | id of the intersection we start from
+`endIntersection` | id of the intersection we end in
+`points`| array of start of the road and end point in `x`,`y` axis
+`lanes` | array of lane {`width`: 4, `maxSpeed`: 16.67}
