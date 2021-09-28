@@ -11,7 +11,7 @@ object|description
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
 `roadLinks`| list of possible route from one road to another trhow the intersection <br>
-{`type`: ,`startRoad`: "road_1",`endRoad`: "road_2",`laneLinks`: []}
+           | {`type`: ,`startRoad`: "road_1",`endRoad`: "road_2",`laneLinks`: []}
                 
 
 
