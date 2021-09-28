@@ -1,298 +1,59 @@
-Roadnet File Format
+Flow File Format
 ===================
-The simulation(cityflow) use this json file to build the road map on wich the vehicle drive. 
-The file compose of 2 main 'objects' wich determined it behaviour: `intersections` , `roads`.
+The simulation(cityflow) use this json file to build vehicle and thier movment. 
+The file compose of array of 'objects' wich determined each vehicle behaviour.
 
-### intersections 
-object|description
+properties|description
 ------|-------------------------
-`id` |uniq string.
-`point`| the intersection centered coordinate `x` , `y`
-`width`| the height or length of the intersection
-`roads`| id's of roads connected to the intersection(max.6)
-`roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: "turn_left" \ "turn_right" \ "go_straight", <br>`startRoad`: from road-id ,<br>`endRoad`: to road-id <br> `laneLinks`: array of lane movment inside the intersection
-`trafficLight` | include `lightphases` wich determined the phase (period,and wich lanes).
-`virtual` | true if it's a peripheral intersection (if it only connects to one road).
-                
-### roads
-object|description
-------|-------------------------
-`id` | uniq string
-`startIntersection` | id of the intersection we start from
-`endIntersection` | id of the intersection we end in
-`points`| array of start of the road and end point in `x`,`y` axis
-`lanes` | array of lane {`width`: 4, `maxSpeed`: 16.67}
+`vehicle` | exclamation ahead 
+`route` | exclamation ahead 
+`interval` | how many step to finish the route
+`startTime` | on wich step it beggin
+`endTime` | witch step hw stops
 
-### example:
-![Screenshot](https://i.ibb.co/XSb6ymR/Screenshot-from-2021-09-28-12-36-29.png)
+
+
+### vehicle
+properties|description
+------|-------------------------
+`length` | vehicle length
+`width` | width of the vehicle
+`maxPosAcc` | max fowrad acceleration
+`maxNegAcc`| max backward acceleration
+`usualPosAcc` | regular foward acceleration
+`usualNegAcc` | regular backward acceleration
+`minGap` | minimum gap from the next vehicle
+`maxSpeed` | vehicle speed limit 
+`headwayTime` | idk
+
+### route:
+properties|description
+------|-------------------------
+`route` | array of road route to go throw
+
+
+
 ```js
-{
-    "intersections": [
-        {
-            "id": "intersection_0_0",
-            "point": {
-                "x": 0,
-                "y": 0
-            },
-            "width": 10,
-            "roads": [
-                "road_0_0_0",
-                "road_0_0_1",
-                "road_1_0_0",
-                "road_1_0_1"
-            ],
-            "roadLinks": [
-                {
-                    "type": "go_straight",
-                    "startRoad": "road_0_0_0",
-                    "endRoad": "road_1_0_1",
-                    "laneLinks": [
-                        {
-                            "startLaneIndex": 0,
-                            "endLaneIndex": 0,
-                            "points": [
-                                {
-                                    "x": 2,
-                                    "y": -5
-                                },
-                                {
-                                    "x": 2,
-                                    "y": 5
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "trafficLight": {
-                "lightphases": [
-                    {
-                        "time": 30,
-                        "availableRoadLinks": [
-                            0
-                        ]
-                    },
-                    {
-                        "time": 5,
-                        "availableRoadLinks": [
-                            
-                        ]
-                    }
-                ]
-            },
-            "virtual": false
+[
+    {
+        "vehicle": {
+            "length": 5.0,
+            "width": 2.0,
+            "maxPosAcc": 2.0,
+            "maxNegAcc": 4.5,
+            "usualPosAcc": 2.0,
+            "usualNegAcc": 4.5,
+            "minGap": 2.5,
+            "maxSpeed": 16.67,
+            "headwayTime": 1.5
         },
-        {
-            "id": "intersection_1_0",
-            "point": {
-                "x": 0,
-                "y": -300
-            },
-            "width": 0,
-            "roads": [
-                "road_0_0_0",
-                "road_0_0_1"
-            ],
-            "roadLinks": [],
-            "virtual": true
-        },
-        {
-            "id": "intersection_1_1",
-            "point": {
-                "x": 0,
-                "y": 300
-            },
-            "width": 0,
-            "roads": [
-                "road_1_0_0",
-                "road_1_0_1"
-            ],
-            "roadLinks": [],
-            "virtual": true
-        }
-    ],
-    "roads": [
-        {
-            "id": "road_0_0_0",
-            "points": [
-                {
-                    "x": 0,
-                    "y": -300
-                },
-                {
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "lanes": [
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                }
-            ],
-            "startIntersection": "intersection_1_0",
-            "endIntersection": "intersection_0_0"
-        },
-        {
-            "id": "road_0_0_1",
-            "points": [
-                {
-                    "x": 0,
-                    "y": 0
-                },
-                {
-                    "x": 0,
-                    "y": -300
-                }
-            ],
-            "lanes": [
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                }
-            ],
-            "startIntersection": "intersection_0_0",
-            "endIntersection": "intersection_1_0"
-        },
-        {
-            "id": "road_1_0_0",
-            "points": [
-                {
-                    "x": 0,
-                    "y": 300
-                },
-                {
-                    "x": 0,
-                    "y": 0
-                }
-            ],
-            "lanes": [
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                }
-            ],
-            "startIntersection": "intersection_1_1",
-            "endIntersection": "intersection_0_0"
-        },
-        {
-            "id": "road_1_0_1",
-            "points": [
-                {
-                    "x": 0,
-                    "y": 0
-                },
-                {
-                    "x": 0,
-                    "y": 300
-                }
-            ],
-            "lanes": [
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                },
-                {
-                    "width": 4,
-                    "maxSpeed": 16.67
-                }
-            ],
-            "startIntersection": "intersection_0_0",
-            "endIntersection": "intersection_1_1"
-        }
-    ]
-}
-
+        "route": [
+            "road_0_0_0",
+            "road_1_0_1"
+        ],
+        "interval": 10.0,
+        "startTime": 0,
+        "endTime": -1
+    }
+]
 ```
