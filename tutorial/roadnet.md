@@ -10,29 +10,8 @@ object|description
 `point`| the intersection centered coordinate `{"x": num1,"y":num2}`
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
-`roadLinks`| list of possible route from one road to another trhow the intersection
-             ```{
-                `type`: ,
-                `startRoad`: "road_1",
-                `endRoad`: "road_2",
-                `laneLinks`: [
-                  {
-                    `startLaneIndex`: 0, 
-                    `endLaneIndex`: 1,
-                    // points along the laneLink which describe the shape of laneLink
-                    `points`: [
-                      {
-                        `x`: -10,
-                        `y`: 2
-                      },
-                      {
-                        `x`: 10,
-                        `y`: -2
-                      }
-                    ]
-                  }
-                ]
-             }```
+`roadLinks`| list of possible route from one road to another trhow the intersection{`type`: ,`startRoad`: "road_1",`endRoad`: "road_2",`laneLinks`: []}
+                
 
 
 
