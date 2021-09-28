@@ -24,6 +24,8 @@ object|description
 `lanes` | array of lane {`width`: 4, `maxSpeed`: 16.67}
 
 ### example:
+
+[img https://ibb.co/hDyrXpz]
 ```js
 {
     "intersections": [
