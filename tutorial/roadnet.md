@@ -9,8 +9,33 @@ object|description
 `id` |uniq string.
 `point`| the intersection centered coordinate `{"x": num1,"y":num2}`
 `width`| the height or length of the intersection
-`roads`| id's of roads connected to the intersection, max.6
-`roadLinks`|
+`roads`| id's of roads connected to the intersection(max.6)
+`roadLinks`| list of possible route from one road to another trhow the intersection<br>
+             {
+                `type`: ,
+                `startRoad`: "road_1",
+                `endRoad`: "road_2",
+                `laneLinks`: [
+                  {
+                    `startLaneIndex`: 0, 
+                    `endLaneIndex`: 1,
+                    // points along the laneLink which describe the shape of laneLink
+                    `points`: [
+                      {
+                        `x`: -10,
+                        `y`: 2
+                      },
+                      {
+                        `x`: 10,
+                        `y`: -2
+                      }
+                    ]
+                  }
+                ]
+             
+             
+             
+             }
 
 
 
@@ -20,36 +45,6 @@ object|description
   {
     "intersections": [
       {
-        // roadLinks of the intersection
-        "roadLinks": [
-          {
-            // 'turn_left', 'turn_right', 'go_straight'
-            "type": "go_straight",
-            // id of starting road
-            "startRoad": "road_1",
-            // id of ending road
-            "endRoad": "road_2",
-            // lanelinks of roadlink
-            "laneLinks": [ 
-              {
-                // from startRoad's startLaneIndex lane to endRoad's endLaneIndex lane
-                "startLaneIndex": 0, 
-                "endLaneIndex": 1,
-                // points along the laneLink which describe the shape of laneLink
-                "points": [
-                  {
-                    "x": -10,
-                    "y": 2
-                  },
-                  {
-                    "x": 10,
-                    "y": -2
-                  }
-                ]
-              }
-            ]
-          }
-        ],
         // traffic light plan of the intersection
         "trafficLight": {
           "lightphases": [
