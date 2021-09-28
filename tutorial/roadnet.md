@@ -11,7 +11,7 @@ object|description
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
 `roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: "turn_left" \ "turn_right" \ "go_straight", <br>`startRoad`: from road-id ,<br>`endRoad`: to road-id <br> `laneLinks`: array of lane movment inside the intersection
-`trafficLight` | include `lightphases` wich determined th phase (period,and wich lanes).
+`trafficLight` | include `lightphases` wich determined the phase (period,and wich lanes).
 `virtual` | true if it's a peripheral intersection (if it only connects to one road).
                 
 ### roads
