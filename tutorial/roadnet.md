@@ -1,10 +1,13 @@
 Roadnet File Format
 ===================
-The simulation(cityflow) use this json file to build the road map on witch the vehicle drive. \n
-The file compose of 3 main 'objects':
-  * dsfgfg
-  * dssfsdf
-the rest
+The simulation(cityflow) use this json file to build the road map on witch the vehicle drive. 
+The file compose of 2 main 'objects': `intersections` , `roads`.
+
+### intersections 
+
+
+
+### roads
 ```js
 
   {
