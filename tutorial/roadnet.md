@@ -1,7 +1,7 @@
 Roadnet File Format
 ===================
-The simulation(cityflow) use this json file to build the road map on witch the vehicle drive. 
-The file compose of 2 main 'objects' witch determined it behaviour: `intersections` , `roads`.
+The simulation(cityflow) use this json file to build the road map on wich the vehicle drive. 
+The file compose of 2 main 'objects' wich determined it behaviour: `intersections` , `roads`.
 
 ### intersections 
 object|description
@@ -10,7 +10,9 @@ object|description
 `point`| the intersection centered coordinate `x` , `y`
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
-`roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: "turn_left" \ "turn_right" \ "go_straight", <br>`startRoad`: from road-id ,<br>`endRoad`: to road-id <br> `laneLinks`: array of lane movment inside the intersection (lane 1 to 2 ect...)
+`roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: "turn_left" \ "turn_right" \ "go_straight", <br>`startRoad`: from road-id ,<br>`endRoad`: to road-id <br> `laneLinks`: array of lane movment inside the intersection
+`trafficLight` | include `lightphases` wich determined th phase (period,and wich lanes).
+`virtual` | true if it's a peripheral intersection (if it only connects to one road).
                 
 
 
