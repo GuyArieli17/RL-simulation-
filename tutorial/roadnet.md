@@ -4,6 +4,9 @@ The simulation(cityflow) use this json file to build the road map on witch the v
 The file compose of 2 main 'objects' witch determined it behaviour: `intersections` , `roads`.
 
 ### intersections 
+object|description
+------|-------------------------
+`id` |uniq to each intersection.
 
 
 
