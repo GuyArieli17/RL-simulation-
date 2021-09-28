@@ -10,7 +10,7 @@ object|description
 `point`| the intersection centered coordinate `x` , `y`
 `width`| the height or length of the intersection
 `roads`| id's of roads connected to the intersection(max.6)
-`roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: `"turn_left"` \ `"turn_right"` \ `"go_straight"`, <br>`startRoad`: ,<br>`endRoad`: <br> `laneLinks`: []
+`roadLinks`| list of possible route from one road to another trhow the intersection Object <br> `type`: ["turn_left" \ "turn_right" \ "go_straight"], <br>`startRoad`: ,<br>`endRoad`: <br> `laneLinks`: []
                 
 
 
